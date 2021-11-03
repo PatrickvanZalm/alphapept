@@ -1,3 +1,4 @@
+pythonnet==2.5.2
 biopython==1.78
 comtypes==1.1.10
 h5py==3.1.0
@@ -15,7 +16,6 @@ seaborn==0.11.1
 tables==3.6.1
 tqdm==4.56.0
 SQLAlchemy==1.4.23
-pythonnet==2.5.2
 pyteomics==4.4.2
 fastcore==1.3.21
 click==7.1.2
