@@ -43,11 +43,14 @@ RUN pip install pycparser \
 #install packages
 RUN pip install -r requirements.txt
 
-#copy some stuff to libgompfiles
-#RUN cp /usr/local/lib/python3.8/dist-packages/alphapept/ext/bruker/FF/linux64/libtbb.so.2 /usr/lib/libtbb.so.2
+#install alphapept
+RUN pip install /home/alphapept
+
+#copy some stuff to libgompfiles --> DOESNT WORK because alphapept is not an installed package here...
+RUN cp /usr/local/lib/python3.8/dist-packages/alphapept/ext/bruker/FF/linux64/libtbb.so.2 /usr/lib/libtbb.so.2
 
 #Give rights
-#RUN chmod 555 -R  /usr/local/lib/python3.8/dist-packages/alphapept/ext/bruker/FF/linux64/uff-cmdline2
+RUN chmod 555 -R  /usr/local/lib/python3.8/dist-packages/alphapept/ext/bruker/FF/linux64/uff-cmdline2
 
 #make container accessible
 CMD ["bash"]
